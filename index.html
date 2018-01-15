@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Rauchfreie Lokale in AUT</title>
+    <link rel="icon" href="./favicon.ico">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+      <div class='container-fluid'>
+        <div class='navbar-header-float-none'>
+          <div class="col-xs-10 col-md-6">
+            <div class="input-group" style="margin-top: 7px;">
+              <input type="text" class="form-control" placeholder="Suche nach Ort..." size="20" length="20" id="searchInput">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="searchButton">
+                <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div class="col-xs-2 col-md-6">
+            <button class="btn navbar-btn btn-link pull-right" data-target="#modalNavigation" data-toggle="modal" type="button">
+            <span class="sr-only">Open navigation</span>
+            <span class="hidden-xs">Erweiterte Suche...</span><span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class='modal fade modal-fullscreen-menu' id='modalNavigation' role='dialog' tabindex='-1'>
+      <!-- BEGIN TESTDATEN - Modaler Fullscreen Dialog/Men&uuml; f&uuml;r erweiterte Funktionen / About-Page etc. -->
+      <button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+      <span class='sr-only'>Close navigation</span>
+      <span class='glyphicon glyphicon-remove'></span>
+      </button>
+      <div class="row modal-dialog">
+        <p class="lead">
+          <span class="text-muted">Dies ist ein Modaler Dialog, der als Info-Box, oder Admin-Panel oder Erweiterte Suche (oder ...) dienen k&ouml;nnte. Hier kann alles m&ouml;gliche stehen.</span>
+          <br><br>
+          Diese Seite bezieht Lokal-Standorte und -Informationen von <a href="//da.stinkts.net/">da.stinkts.net</a>.<br><br>
+          Wenn dein Lieblingslokal, fehlt kannst du es <a href="http://da.stinkts.net/rauchfreies-lokal-vorschlagen.html">hier</a> eintragen.
+          <br><br><br>
+          <span class="text-muted">
+            <u>
+            Scroll down for more examples that this dialog could feature, or just click <a href="#irgendwas" class="js-scroll-trigger"><span class="glyphicon glyphicon-chevron-down"></span>
+          </u></span>
+        </p>
+      </div>
+      <div class="row">
+        <div class='modal-dialog' id="irgendwas">
+          <nav class='list-group'>
+            <a class='list-group-item' href='#'>menue0</a>
+            <a class='list-group-item' href='#'>menue1</a>
+            <a class='list-group-item' href='#'>menue2</a>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <h1 class="my-4">Hier k&ouml;nnte eine Lokalbewertung stehen...</h1>
+        </div>
+        <!-- /.col-lg-3 -->
+        <div class="col-lg-9">
+          <div class="card mt-4">
+            <div class="card-body">
+              <h3 class="card-title">Lokalname</h3>
+              <h4>$24.99</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+              <span class="text-warning">★ ★ ★ ★ ☆</span>
+              4.0 stars
+            </div>
+          </div>
+          <!-- /.card -->
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+              Product Reviews
+            </div>
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <a href="#" class="btn btn-success">Leave a Review</a>
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col-lg-9 -->
+      </div>
+      <!-- END - TESTDATEN -->
+    </div>
+    <div id="map" tabindex="999"></div>
+    <div class="loading loadingpleasewait">Loading&#8230;</div>
+    <!-- <img src="./img/loading-3.gif" class="loadingpleasewait" style="position: fixed; z-index: 9999999; top: 50%; left: 50%;margin-right: -50%; transform: translate(-50%, -50%); min-height: 9em; max-width: 13em;"> -->
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyCPts4k7ovu98FfhufbfJVstpRBPmO1RwE&sensor=true"></script>
+  <script src="./gmaps.js"></script>
+  <script src="./script.js"></script>
+  <script>
+  /*
+  your script here...
+  */
+  </script>
+</body>
+</html>
