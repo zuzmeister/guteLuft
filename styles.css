@@ -3,22 +3,15 @@ html, body {
     width: 100%;
 }
 
-/*#loadingpleasewait{
-  height: 100%;
-  width: 100%;
-  left: 0;
+#loadingpleasewait{
   position: fixed;
-  top: 0;
-  background-color: rgba(200,200,200,.7);
   z-index: 9999999;
-}
-
-#loadingpleasewaitimage{
-  height: 50px;
-  width: 50px;
   top: 50%;
   left: 50%;
-}*/
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  min-height: 9em; max-width: 13em;
+}
 
 .navbar-inverse {
   background-color: rgba(0,0,0,.7);
