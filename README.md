@@ -2,7 +2,7 @@
 Mockup einer besseren Visualisierung aller Rauchfreien Lokale in Österreich unter Zuhilfenahme der API von [da.stinkts.net](https://da.stinkts.net).
 
 ## Demo
-https://tommachtalles.net/guteluft
+https://guteluft.net
 
 ## Installation / Ausführung
 ### Auf **Webserver**:
