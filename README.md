@@ -13,7 +13,7 @@ PHP 5.6 oder höher. Ändere in den ersten 5 Zeilen von `script.js`:
 
 var json_start = './json_start.php?'; // ..."guteluft" auf eigenem Webserver mit php läuft
 
-//var json_start = 'https://tommachtalles.net/guteluft/json_start.php?'; // ...  die api auf tommachtalles.net verwendet werden soll
+//var json_start = 'https://guteluft.net/latest.json?'; // ... die JSON-Daten von guteluft.net verwendet werden soll
 ~~~
 ### Auf **Desktop**:  
 Aktuelle Version [herunterladen](https://github.com/zuzmeister/guteLuft/archive/master.zip), entzippen, "index.html" ausführen.
